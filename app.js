@@ -11,7 +11,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 mongoose.connect(
-  "mongodb+srv://sourabhchoudhary:Sourabh1503.@cluster0.hch1sgl.mongodb.net/postDB",
+  "mongodb+srv://sourabhchoudhary:<Password>@cluster0.hch1sgl.mongodb.net/postDB",
   { useNewUrlParser: true }
 );
 const homeStartingContent =
