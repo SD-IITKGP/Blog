@@ -56,12 +56,14 @@ app.get("/posts/:type", function (req, res) {
           if (
             lodash.lowerCase(post.title) === lodash.lowerCase(req.params.type)
           ) {
-            res.render("post", { post: post });
-          } else {
-            res.render("post", {
-              post: { title: "Error: 404", body: "Not Found :(" },
-            });
+            // console.log(post.title);
+            res.render("post", { postIn: post });
           }
+          //  else {
+          //   res.render("post", {
+          //     post: { title: "Error: 404", body: "Not Found :(" },
+          //   });
+          // }
         });
       } else {
         res.render("post", {
